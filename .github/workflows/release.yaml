@@ -40,6 +40,8 @@ jobs:
         runCmd: |
           set -euo pipefail
           rm -rf src/Build
+          rm -rf .cache
+          rm -rf ~/.cache
           make deb
     - id: "artifacts_path"
       name: "Workaround actions/upload-artifact#176"
