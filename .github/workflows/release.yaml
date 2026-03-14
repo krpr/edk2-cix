@@ -39,6 +39,7 @@ jobs:
         push: "never"
         runCmd: |
           set -euo pipefail
+          rm -rf src/Build
           make deb
     - id: "artifacts_path"
       name: "Workaround actions/upload-artifact#176"
